@@ -26,5 +26,8 @@ jobs:
       run: chmod +x gradlew
     
     - name: Execute Gradle build
+      env:
+        slack_channel: ${{ secrets.SLACK_CHANNEL }}
+        slack_key: ${{ secrets.SLACK_KEY }}
       run: ./gradlew build
       
