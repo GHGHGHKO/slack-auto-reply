@@ -6,3 +6,8 @@ spring:
     job.names: ${job.name:NONE}
     jdbc:
       initialize-schema: always
+
+slack:
+  url: https://slack.com/api
+  channel: your-channel-code
+  key: your-slack-key
