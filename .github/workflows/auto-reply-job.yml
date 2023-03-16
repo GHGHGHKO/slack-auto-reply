@@ -1,7 +1,7 @@
 name: slack auto reply job
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '*/2 * * * *'
     
 jobs:
   gradle:
@@ -24,8 +24,13 @@ jobs:
       run: chmod +x gradlew
       
     - name: Execute Gradle build
+      env:
+        slack_channel: ${{ secrets.SLACK_CHANNEL }}
+        slack_key: ${{ secrets.SLACK_KEY }}
+        slack_botcode: ${{ secrets.SLACK_BOTCODE }}
+        slack_write_channelname: ${{ secrets.SLACK_WRITE_CHANNELNAME }}
+        slack_write_text: ${{ secrets.SLACK_WRITE_TEXT }}
       run: ./gradlew build -x test
       
     - name: Simple Job Execute
       run: java -jar -Dspring.batch.job.names=autoReplyJob -Dspring.profiles.active=default ./build/libs/action-0.0.1-SNAPSHOT.jar
-      
