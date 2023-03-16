@@ -6,13 +6,13 @@ data class ConversationsHistoryResponseDto (
     @JsonProperty("ok") val ok: Boolean,
     @JsonProperty("latest") val latest: String,
     @JsonProperty("oldest") val oldest: String,
-    @JsonProperty("messages") val messages: List<Messages>,
+    @JsonProperty("messages") val messages: List<Messages>?,
     @JsonProperty("has_more") val hasMore: Boolean,
     @JsonProperty("pin_count") val pinCount: Int,
 )
 
 data class Messages(
-    @JsonProperty("client_msg_id") val clientMsgId: String,
+    @JsonProperty("client_msg_id") val clientMsgId: String?,
     @JsonProperty("type") val type: String,
     @JsonProperty("text") val text: String,
     @JsonProperty("user") val user: String,

@@ -15,8 +15,7 @@ class SlackReplyTasklet(
         contribution: StepContribution,
         chunkContext: ChunkContext
     ): RepeatStatus {
-        println("execute SlackReplyTasklet")
-        slackReplyService.getSlackConversationsHistory()
+        slackReplyService.postThreadMessage()
         return RepeatStatus.FINISHED
     }
 }
