@@ -1,8 +1,8 @@
 name: Slack Auto Reply Job
 
-on:
-  schedule:
-    - cron: '*/5 * * * *'
+# on:
+  # schedule:
+    # - cron: '*/5 * * * *'
     
 jobs:
   gradle:
