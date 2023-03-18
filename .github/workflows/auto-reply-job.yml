@@ -20,9 +20,4 @@ jobs:
     - name: Run Docker container
       uses: docker://gudrb963/slack-auto-reply:latest
       env:
-        slack_channel: ${{ secrets.SLACK_CHANNEL }}
-        slack_key: ${{ secrets.SLACK_KEY }}
-        slack_botcode: ${{ secrets.SLACK_BOTCODE }}
-        slack_write_channelname: ${{ secrets.SLACK_WRITE_CHANNELNAME }}
-        slack_write_text: ${{ secrets.SLACK_WRITE_TEXT }}
         SPRING_BATCH_JOB_NAMES: autoReplyJob
