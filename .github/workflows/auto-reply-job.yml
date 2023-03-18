@@ -26,6 +26,6 @@ jobs:
     - name: Run Docker Container
       uses: docker/metadata-action@v3
       with:
-        image: gudrb963/slack-auto-reply:latest
+        images: gudrb963/slack-auto-reply:latest
         options: -e SPRING_BATCH_JOB_NAMES=autoReplyJob -e slack_channel=${{ secrets.SLACK_CHANNEL }} -e slack_key=${{ secrets.SLACK_KEY }} -e slack_botcode=${{ secrets.SLACK_BOTCODE }} -e slack_write_channelname=${{ secrets.SLACK_WRITE_CHANNELNAME }} -e slack_write_text=${{ secrets.SLACK_WRITE_TEXT }}
         entrypoint: java -jar /path/to/your/jar/reply-0.0.1-SNAPSHOT.jar --spring.batch.job.names=autoReplyJob
