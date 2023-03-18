@@ -49,12 +49,7 @@ jobs:
       run: chmod +x gradlew
       
     - name: Execute Gradle build
-      env:
-        slack_channel: ${{ secrets.SLACK_CHANNEL }}
-        slack_key: ${{ secrets.SLACK_KEY }}
-        slack_botcode: ${{ secrets.SLACK_BOTCODE }}
-        slack_write_channelname: ${{ secrets.SLACK_WRITE_CHANNELNAME }}
-        slack_write_text: ${{ secrets.SLACK_WRITE_TEXT }}
+      
       run: ./gradlew build
         
     - name: Login to Docker Hub
@@ -63,5 +58,13 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-    - name: Gradle Jib
-      run: ./gradlew jib
+    - name: Jib with Gradle
+      uses: gradle/gradle-build-action@v2.4.0
+      env:
+        slack_channel: ${{ secrets.SLACK_CHANNEL }}
+        slack_key: ${{ secrets.SLACK_KEY }}
+        slack_botcode: ${{ secrets.SLACK_BOTCODE }}
+        slack_write_channelname: ${{ secrets.SLACK_WRITE_CHANNELNAME }}
+        slack_write_text: ${{ secrets.SLACK_WRITE_TEXT }}
+      with:
+        arguments: jib
