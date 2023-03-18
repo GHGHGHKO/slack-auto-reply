@@ -25,4 +25,4 @@ jobs:
         slack_write_channelname: ${{ secrets.SLACK_WRITE_CHANNELNAME }}
         slack_write_text: ${{ secrets.SLACK_WRITE_TEXT }}
         SPRING_BATCH_JOB_NAMES: autoReplyJob
-      run: docker run -e slack_channel=$slack_channel -e slack_key=$slack_key -e slack_botcode=$slack_botcode -e slack_write_channelname=$slack_write_channelname -e slack_write_text=$slack_write_text -e SPRING_BATCH_JOB_NAMES=$SPRING_BATCH_JOB_NAMES your-docker-image-name:latest
+      run: docker run -e slack_channel=$slack_channel -e slack_key=$slack_key -e slack_botcode=$slack_botcode -e slack_write_channelname=$slack_write_channelname -e slack_write_text=$slack_write_text -e SPRING_BATCH_JOB_NAMES=$SPRING_BATCH_JOB_NAMES gudrb963/slack-auto-reply:latest
