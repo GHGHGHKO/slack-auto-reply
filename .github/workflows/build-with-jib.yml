@@ -27,4 +27,6 @@ jobs:
     
     - name: Execute Gradle build
       run: ./gradlew build
-      
+    
+    - name: Gradle Jib
+      run: ./gradlew jib
