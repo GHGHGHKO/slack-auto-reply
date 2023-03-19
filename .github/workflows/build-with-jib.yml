@@ -55,4 +55,10 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
     - name: Jib with Gradle
+      env:
+        SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+        SLACK_KEY: ${{ secrets.SLACK_KEY }}
+        SLACK_BOTCODE: ${{ secrets.SLACK_BOTCODE }}
+        SLACK_WRITE_CHANNELNAME: ${{ secrets.SLACK_WRITE_CHANNELNAME }}
+        SLACK_WRITE_TEXT: ${{ secrets.SLACK_WRITE_TEXT }}
       run: ./gradlew jib
