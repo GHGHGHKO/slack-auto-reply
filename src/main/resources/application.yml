@@ -9,9 +9,9 @@ spring:
 
 slack:
   url: https://slack.com/api
-  channel: your-channel-key-ex-C04T4M4GD11
-  key: your-key-prefix-xoxb
-  botCode: your-bot-code-ex-U04SY9SHTH9
+  channel: ${{ secrets.SLACK_CHANNEL }}
+  key: ${{ secrets.SLACK_KEY }}
+  botCode: ${{ secrets.SLACK_BOTCODE }}
   write:
-    channelName: your-channel-name-ex-SOME-MY-CHANNEL
-    text: reply-comment-ex-HELLO-WORLD
+    channelName: ${{ secrets.SLACK_WRITE_CHANNELNAME }}
+    text: ${{ secrets.SLACK_WRITE_TEXT }}
