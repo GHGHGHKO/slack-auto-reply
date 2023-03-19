@@ -9,9 +9,9 @@ spring:
 
 slack:
   url: https://slack.com/api
-  channel: ${SLACK_CHANNEL}
-  key: ${SLACK_KEY}
-  botCode: ${SLACK_BOTCODE}
+  channel: ${secrets.SLACK_CHANNEL}
+  key: ${secrets.SLACK_KEY}
+  botCode: ${secrets.SLACK_BOTCODE}
   write:
-    channelName: ${SLACK_WRITE_CHANNELNAME}
-    text: ${SLACK_WRITE_TEXT}
+    channelName: ${secrets.SLACK_WRITE_CHANNELNAME}
+    text: ${secrets.SLACK_WRITE_TEXT}
