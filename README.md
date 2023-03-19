@@ -15,3 +15,8 @@ slack 환영 봇 입니다.
 
 # 구현 로직
 ![flow](https://user-images.githubusercontent.com/26823834/226167797-1614c731-47bf-47c0-ba78-68c7dab3195e.png)
+
+1. spring batch로 job을 생성합니다.
+2. Jib을 활용하여 application을 container화 한 뒤 dockerhub에 업로드 합니다.
+3. Github Actions에서 dockerhub에 접근하여 container에서 job을 실행합니다.
+4. 다음 스케줄에서 다시 dockerhub에 접근하여 container를 실행합니다.
