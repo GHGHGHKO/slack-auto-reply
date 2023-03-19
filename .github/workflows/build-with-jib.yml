@@ -47,7 +47,21 @@ jobs:
       
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-        
+
+  - name: Substitute Slack configuration
+    env:
+      SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+      SLACK_KEY: ${{ secrets.SLACK_KEY }}
+      SLACK_BOTCODE: ${{ secrets.SLACK_BOTCODE }}
+      SLACK_WRITE_CHANNELNAME: ${{ secrets.SLACK_WRITE_CHANNELNAME }}
+      SLACK_WRITE_TEXT: ${{ secrets.SLACK_WRITE_TEXT }}
+    run: |
+      sed -i "s|{{SLACK_CHANNEL}}|${SLACK_CHANNEL}|g" ./src/main/resources/application.yml
+      sed -i "s|{{SLACK_KEY}}|${SLACK_KEY}|g" ./src/main/resources/application.yml
+      sed -i "s|{{SLACK_BOTCODE}}|${SLACK_BOTCODE}|g" ./src/main/resources/application.yml
+      sed -i "s|{{SLACK_WRITE_CHANNELNAME}}|${SLACK_WRITE_CHANNELNAME}|g" ./src/main/resources/application.yml
+      sed -i "s|{{SLACK_WRITE_TEXT}}|${SLACK_WRITE_TEXT}|g" ./src/main/resources/application.yml
+
     - name: Login to Docker Hub
       uses: docker/login-action@v2
       with:
@@ -55,10 +69,4 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
     - name: Jib with Gradle
-      env:
-        SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
-        SLACK_KEY: ${{ secrets.SLACK_KEY }}
-        SLACK_BOTCODE: ${{ secrets.SLACK_BOTCODE }}
-        SLACK_WRITE_CHANNELNAME: ${{ secrets.SLACK_WRITE_CHANNELNAME }}
-        SLACK_WRITE_TEXT: ${{ secrets.SLACK_WRITE_TEXT }}
-      run: ./gradlew jibDockerBuild
+      run: ./gradlew jib
