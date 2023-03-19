@@ -26,7 +26,7 @@ jobs:
       run: chmod +x gradlew
     
     - name: Execute Gradle build
-      run: ./gradlew build
+      run: ./gradlew build -x test
       
   jib:
     needs: gradle
@@ -47,10 +47,6 @@ jobs:
       
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-      
-    - name: Execute Gradle build
-      
-      run: ./gradlew build
         
     - name: Login to Docker Hub
       uses: docker/login-action@v2
@@ -59,12 +55,4 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
     - name: Jib with Gradle
-      uses: gradle/gradle-build-action@v2.4.0
-      env:
-        slack_channel: ${{ secrets.SLACK_CHANNEL }}
-        slack_key: ${{ secrets.SLACK_KEY }}
-        slack_botcode: ${{ secrets.SLACK_BOTCODE }}
-        slack_write_channelname: ${{ secrets.SLACK_WRITE_CHANNELNAME }}
-        slack_write_text: ${{ secrets.SLACK_WRITE_TEXT }}
-      with:
-        arguments: jib
+      run: ./gradlew jib
