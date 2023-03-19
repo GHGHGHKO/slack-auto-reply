@@ -11,7 +11,7 @@ slack:
   url: https://slack.com/api
   channel: {{SLACK_CHANNEL}}
   key: {{SLACK_KEY}}
-  bot-code: {{SLACK_BOTCODE}}
+  botCode: {{SLACK_BOTCODE}}
   write:
-    channel-name: {{SLACK_WRITE_CHANNELNAME}}
+    channelName: {{SLACK_WRITE_CHANNELNAME}}
     text: {{SLACK_WRITE_TEXT}}
