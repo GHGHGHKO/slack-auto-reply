@@ -61,4 +61,4 @@ jobs:
         SLACK_BOTCODE: ${{ secrets.SLACK_BOTCODE }}
         SLACK_WRITE_CHANNELNAME: ${{ secrets.SLACK_WRITE_CHANNELNAME }}
         SLACK_WRITE_TEXT: ${{ secrets.SLACK_WRITE_TEXT }}
-      run: ./gradlew jib
+      run: ./gradlew jibDockerBuild
