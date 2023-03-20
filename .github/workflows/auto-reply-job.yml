@@ -5,6 +5,7 @@ on:
     inputs:
       message:
         description: 'run trigger'
+        default: 'true'
         required: true
     
 jobs:
@@ -21,3 +22,8 @@ jobs:
       uses: docker://gudrb963/slack-auto-reply:latest
       env:
         SPRING_BATCH_JOB_NAMES: autoReplyJob
+        SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+        SLACK_KEY: ${{ secrets.SLACK_KEY }}
+        SLACK_BOTCODE: ${{ secrets.SLACK_BOTCODE }}
+        SLACK_WRITE_CHANNELNAME: ${{ secrets.SLACK_WRITE_CHANNELNAME }}
+        SLACK_WRITE_TEXT: ${{ secrets.SLACK_WRITE_TEXT }}
