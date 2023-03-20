@@ -8,6 +8,9 @@ slack 환영 봇 입니다.
 아직 스케줄이 걸려있지 않습니다. ([수동 트리거](https://github.com/GHGHGHKO/slack-auto-reply/blob/797fd4d58c91fd696c80ead0294e0d581b897173/.github/workflows/auto-reply-job.yml#L7) 로 되어있습니다.)  
 조절 후 반영 할 예정입니다.
 
+# 사용방법
+slack-auth-reply [사용방법](https://github.com/GHGHGHKO/slack-auto-reply/wiki/slack-auto-reply-%EC%82%AC%EC%9A%A9%EB%B0%A9%EB%B2%95)
+
 # 환경변수 (Github secrets 목록)
 
 |Key|Value|설명|
