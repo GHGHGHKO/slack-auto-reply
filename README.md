@@ -33,3 +33,7 @@ slack-auth-reply [사용방법 ](https://github.com/GHGHGHKO/slack-auto-reply/wi
 2. Jib을 활용하여 application을 container화 한 뒤 dockerhub에 업로드 합니다.
 3. Github Actions에서 dockerhub에 접근하여 container에서 job을 실행합니다.
 4. 다음 스케줄에서 다시 dockerhub에 접근하여 container를 실행합니다.
+
+# 기여하기
+오류, 질문은 [여기에 글을 작성](https://github.com/GHGHGHKO/slack-auto-reply/issues/new)해주세요!  
+Pull requests는 대환영입니다!
