@@ -8,6 +8,16 @@ slack 환영 봇 입니다.
 아직 스케줄이 걸려있지 않습니다. ([수동 트리거](https://github.com/GHGHGHKO/slack-auto-reply/blob/797fd4d58c91fd696c80ead0294e0d581b897173/.github/workflows/auto-reply-job.yml#L7) 로 되어있습니다.)  
 조절 후 반영 할 예정입니다.
 
+# 환경변수 (Github secrets 목록)
+
+|Key|Value|설명|
+|------|---|---|
+|SLACK_CHANNEL|Slack 채널 코드|영어와 숫자로 이루어져 있습니다.|
+|SLACK_KEY|Slack key|xoxb로 시작하는 키 입니다.|
+|SLACK_WRITE_CHANNELNAME|채널 이름|채널의 이름입니다.(예, 봇-테스트)|
+|SLACK_BOTCODE|Slack 봇 코드|영어와 숫자로 이루어져 있습니다.|
+|SLACK_WRITE_TEXT|봇의 문구|환영하는 글을 적어주세요!|
+
 # 참고 이미지
 ![image](https://user-images.githubusercontent.com/26823834/226167760-8c686cc5-675d-4fff-9dda-73d3c91d7a39.png)
 
