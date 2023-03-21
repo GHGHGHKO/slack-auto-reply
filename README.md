@@ -37,4 +37,4 @@ Github secrets에 들어갈 정보 구하기 [wiki](https://github.com/GHGHGHKO/
 
 # 기여하기
 오류, 질문은 [여기에 글을 작성](https://github.com/GHGHGHKO/slack-auto-reply/issues/new)해주세요!  
-Pull requests는 대환영입니다!
+[Pull requests](https://github.com/GHGHGHKO/slack-auto-reply/pulls)는 대환영입니다!
