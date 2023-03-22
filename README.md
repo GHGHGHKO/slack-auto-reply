@@ -22,7 +22,7 @@ slack auto reply를 사용하기 위한 slack 봇 생성하기 [wiki](https://gi
 |SLACK_WRITE_CHANNELNAME|채널 이름|채널의 이름입니다.(예, 봇-테스트)|
 |SLACK_BOTCODE|Slack 봇 코드|영어와 숫자로 이루어져 있습니다.|
 |SLACK_WRITE_TEXT|봇의 문구|환영하는 글을 적어주세요!|
-|SLACK_HISTORYRANGE|채팅 history 조회 범위|분 단위로 적어주세요.  ex) 10 -> between 현재시간 - 10분 and 현재시간|
+|SLACK_HISTORYRANGE|채팅 history 조회 범위|분 단위로 적어주세요.<br> ex) 10<br>10이라고 적고<br>현재시간이 22:15인 경우<br> 22:05 ~ 22:15 조회 |
 
 # 참고 이미지
 ![image](https://user-images.githubusercontent.com/26823834/226167760-8c686cc5-675d-4fff-9dda-73d3c91d7a39.png)
