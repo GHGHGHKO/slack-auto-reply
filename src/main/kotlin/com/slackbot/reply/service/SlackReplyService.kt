@@ -36,7 +36,7 @@ class SlackReplyService(
 
     fun getSlackConversationsHistory(): ConversationsHistoryResponseDto {
         val latestChat = System.currentTimeMillis()
-        val oldestChat = latestChat - (1000L * 60 * CHAT_HISTORY_TIME_RANGE)
+        val oldestChat = latestChat - (1000L * 60 * CHAT_HISTORY_MINUTES_RANGE)
         val getConversationsHistory = slackReadClient
             .findByConversationsHistory(
                 authentication = "Bearer $slackKey",
@@ -82,6 +82,6 @@ class SlackReplyService(
     }
 
     companion object {
-        private const val CHAT_HISTORY_TIME_RANGE = 10
+        private const val CHAT_HISTORY_MINUTES_RANGE = 10
     }
 }
