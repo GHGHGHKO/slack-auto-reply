@@ -10,7 +10,8 @@ slack 환영 봇 입니다.
 
 # 사용방법
 slack-auth-reply [wiki](https://github.com/GHGHGHKO/slack-auto-reply/wiki/slack-auto-reply-%EC%82%AC%EC%9A%A9%EB%B0%A9%EB%B2%95)  
-Github secrets에 들어갈 정보 구하기 [wiki](https://github.com/GHGHGHKO/slack-auto-reply/wiki/Github-secrets%EC%97%90-%EB%93%A4%EC%96%B4%EA%B0%88-%EC%A0%95%EB%B3%B4-%EA%B5%AC%ED%95%98%EA%B8%B0)
+Github secrets에 들어갈 정보 구하기 [wiki](https://github.com/GHGHGHKO/slack-auto-reply/wiki/Github-secrets%EC%97%90-%EB%93%A4%EC%96%B4%EA%B0%88-%EC%A0%95%EB%B3%B4-%EA%B5%AC%ED%95%98%EA%B8%B0)  
+slack auto reply를 사용하기 위한 slack 봇 생성하기 [wiki](https://github.com/GHGHGHKO/slack-auto-reply/wiki/slack-auto-reply%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-slack-%EB%B4%87-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0)
 
 # 환경변수 (Github secrets 목록)
 
