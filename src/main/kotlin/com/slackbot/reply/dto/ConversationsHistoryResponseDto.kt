@@ -17,8 +17,8 @@ data class Messages(
     @JsonProperty("text") val text: String,
     @JsonProperty("user") val user: String,
     @JsonProperty("ts") val ts: String,
-    @JsonProperty("blocks") val blocks: List<Blocks>,
-    @JsonProperty("team") val team: String,
+    @JsonProperty("blocks") val blocks: List<Blocks>?,
+    @JsonProperty("team") val team: String?,
     @JsonProperty("thread_ts") val threadTs: String?,
     @JsonProperty("reply_count") val replyCount: Int?,
     @JsonProperty("reply_users_count") val replyUsersCount: Int?,
@@ -29,7 +29,7 @@ data class Messages(
 )
 
 data class Blocks(
-    @JsonProperty("type") val type: String,
-    @JsonProperty("block_id") val blockId: String
+    @JsonProperty("type") val type: String?,
+    @JsonProperty("block_id") val blockId: String?
 )
 
