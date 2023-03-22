@@ -12,6 +12,7 @@ slack:
   channel: insert-your-channel-code
   key: insert-your-slack-key
   botCode: insert-your-bot-code
+  historyRange: insert-your-range
   write:
     channelName: insert-your-channel-name
     text: insert-your-text

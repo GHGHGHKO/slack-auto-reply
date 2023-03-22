@@ -23,6 +23,9 @@ class SlackReplyService(
     @Value("\${slack.botCode}")
     lateinit var slackBotCode: String
 
+    @Value("\${slack.historyRange}")
+    lateinit var historyRange: String
+
     fun postThreadMessage() {
         val getConversationsHistory = getSlackConversationsHistory()
         if (getConversationsHistory.ok) {
@@ -36,7 +39,7 @@ class SlackReplyService(
 
     fun getSlackConversationsHistory(): ConversationsHistoryResponseDto {
         val latestChat = System.currentTimeMillis()
-        val oldestChat = latestChat - (1000L * 60 * CHAT_HISTORY_MINUTES_RANGE)
+        val oldestChat = latestChat - (1000L * 60 * Integer.parseInt(historyRange))
         val getConversationsHistory = slackReadClient
             .findByConversationsHistory(
                 authentication = "Bearer $slackKey",
@@ -79,9 +82,5 @@ class SlackReplyService(
             throw IllegalArgumentException("/chat.postMessage is " +
                     "${writeChatPostThreadMessage.ok}")
         }
-    }
-
-    companion object {
-        private const val CHAT_HISTORY_MINUTES_RANGE = 10
     }
 }

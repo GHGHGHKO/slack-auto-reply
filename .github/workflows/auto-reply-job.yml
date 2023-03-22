@@ -25,5 +25,6 @@ jobs:
         SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
         SLACK_KEY: ${{ secrets.SLACK_KEY }}
         SLACK_BOTCODE: ${{ secrets.SLACK_BOTCODE }}
+        SLACK_HISTORYRANGE: ${{ secrets.SLACK_HISTORYRANGE }}
         SLACK_WRITE_CHANNELNAME: ${{ secrets.SLACK_WRITE_CHANNELNAME }}
         SLACK_WRITE_TEXT: ${{ secrets.SLACK_WRITE_TEXT }}
